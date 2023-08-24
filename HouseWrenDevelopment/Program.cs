@@ -1,7 +1,24 @@
+using HouseWrenDevelopment.Models.Contact;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+EmailServerConfig config = new EmailServerConfig
+{
+    SmtpPassword = "caixtwnhcqmnxeqs",
+    SmtpServer = "smtp.gmail.com",
+    SmtpUsername = "housewren6@gmail.com"
+};
+
+EmailAddress ToEmailAddress = new EmailAddress
+{
+    Address = "housewren6@gmail.com",
+    Name = "HouseWrenDev"
+};
+builder.Services.AddSingleton<EmailServerConfig>(config);
+builder.Services.AddTransient<IEmailService, MailKitEmailService>();
+builder.Services.AddSingleton<EmailAddress>(ToEmailAddress);
 
 var app = builder.Build();
 
