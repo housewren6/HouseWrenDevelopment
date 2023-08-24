@@ -6,14 +6,14 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddControllersWithViews();
 EmailServerConfig config = new EmailServerConfig
 {
-    SmtpPassword = "caixtwnhcqmnxeqs",
+    SmtpPassword =  Environment.GetEnvironmentVariable("smtpPassword"),
     SmtpServer = "smtp.gmail.com",
-    SmtpUsername = "housewren6@gmail.com"
+    SmtpUsername = Environment.GetEnvironmentVariable("smtpUsername")
 };
 
 EmailAddress ToEmailAddress = new EmailAddress
 {
-    Address = "housewren6@gmail.com",
+    Address = Environment.GetEnvironmentVariable("smtpUsername"),
     Name = "HouseWrenDev"
 };
 builder.Services.AddSingleton<EmailServerConfig>(config);
