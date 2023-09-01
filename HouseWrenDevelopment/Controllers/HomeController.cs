@@ -35,7 +35,7 @@ namespace HouseWrenDevelopment.Controllers
                     Content = $"New message from:\n" +
                     $"Name: {model.Name}, " +
                         $"Email: {model.Email} \nMessage: {model.Message}",
-                    Subject = model.Subject
+                    Subject = "HouseWrenDev Contact - " + model.Subject
                 };
 
                 EmailService.Send(msgToSend);
