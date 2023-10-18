@@ -52,7 +52,7 @@
 
         <div class="section-title">
             <h2>Objective</h2>
-            <p>To design, research, develop, test, document, and maintain readable software code and databases to promote functionality, reliability, integrity, and user-experience.</p>
+            <p>Experienced developer with a strong foundation in software engineering and cloud support, seeking opportunities to leverage skills in a dynamic environment that values innovation and individual contributions.</p>
         </div>
     </div>
 </section><!-- End Why Us Section -->
@@ -70,10 +70,11 @@
             <div class="col-lg-6 pt-4 pt-lg-0 order-2 order-lg-1 content">
                 <h3>House Wren Development</h3>                
                 <ul>
-                    <li><i class="bi bi-check-circle"></i> is driven by 4+ years programming experience with specialization in .NET Framework and responsive web design,</li>
-                    <li><i class="bi bi-check-circle"></i> strives to always learn new concepts and systems to keep up with constantly evolving technology,</li>
-                    <li><i class="bi bi-check-circle"></i> self-starts and is driven for problem solving and dissecting detail-oriented work, and</li>
-					<li><i class="bi bi-check-circle"></i> finds organization and builds structure to analyze complex problems to condense information to convey specific concepts in relatable terms.</li>
+                    <li><i class="bi bi-check-circle"></i> is driven by 4+ years programming experience with specialization in .NET and responsive web design,</li>
+                    <li><i class="bi bi-check-circle"></i> has commitment to continuous learning with our constantly evolving technology,</li>
+                    <li><i class="bi bi-check-circle"></i> self-starts and is driven for problem solving and dissecting detail-oriented work, </li>
+                    <li><i class="bi bi-check-circle"></i> proficiently builds structure to analyze complex problems to convey specific concepts in relatable terms, and</li>
+                    <li><i class="bi bi-check-circle"></i> designs, researches, develops, tests, documents, and maintains readable software code and databases to promote functionality, reliability, integrity, and user-experience.</li>
                 </ul><br/>				
                 <p class="fst-italic">
                    HWD looks forward to collaborating on your software design and maintenance needs. 
@@ -115,7 +116,7 @@
                     <a href="https://mealmaker.azurewebsites.net/">Meal Maker</a><span>C#</span>
                 </div>
                 <div class="menu-ingredients">
-                    ASP.NET app using EF Core and USDA data to generate a random list of food components for a meal. <a href="https://mealmaker.azurewebsites.net/">Website</a> | <a href="https://github.com/housewrendevelopment/MealMaker">Code</a>
+                    ASP.NET app using EF Core, OpenAI and USDA data to generate a meal's instructions. <a href="https://mealmaker.azurewebsites.net/">Website</a> | <a href="https://github.com/housewrendevelopment/MealMaker">Code</a>
                 </div>
             </div>
 
@@ -170,17 +171,6 @@
                 </div>
             </div>
 
-
-            <div class="col-lg-6 menu-item filter-csharp">
-                <i class="bi bi-check-circle"></i>
-                <div class="menu-content">
-                    <a href="https://github.com/housewrendevelopment/HouseWrenDevCodeSamples/blob/master/HouseWrenDevCodeSamples/GetRegistrySubkeyValue.cs">Query Computer Information</a><span>C#</span>
-                </div>
-                <div class="menu-ingredients">
-                    Utilize Environment variables and Registry keys for code secrets and maintenance 
-                </div>
-            </div>
-
             <div class="col-lg-6 menu-item filter-csharp">
                 <i class="bi bi-check-circle"></i>
                 <div class="menu-content">
@@ -232,12 +222,15 @@
                                 <p><span>C#</span></p>
                             </div>
                             <p>
-                                ASP.NET app using EF Core and USDA FoodCentral data to generate a random list of food components for a meal
+                                ASP.NET app using EF Core, OpenAI and USDA FoodCentral data to generate a meal's instructions.
                             </p>
                             <ul>
                                 <li><i class="bi bi-check-circle"></i> Created custom models to match JSON file import</li>
                                 <li><i class="bi bi-check-circle"></i> Deserialized JSON file and created tables using Entity Frameworks Core migrations</li>
                                 <li><i class="bi bi-check-circle"></i> Verified data import in SQL tables using custom T-SQL queries in SSMS</li>
+                                <li><i class="bi bi-check-circle"></i> Call custom OpenAI prompt with random ingredients</li>
+                                <li><i class="bi bi-check-circle"></i> Configure input section so users can pick specific ingredients to generate a meal</li>
+
                             </ul>
                             <p><a href="https://mealmaker.azurewebsites.net/">Website</a> | <a href="https://github.com/housewrendevelopment/MealMaker">Code</a></p>
                         </div>
@@ -279,11 +272,12 @@
 
         <div class="section-title">
             <h2>Contact</h2>
-            <p>House Wren Development</p>
+            <p>House Wren Development</p>            
         </div>
     </div>
-    <div class="container" data-aos="fade-up">
 
+    <div class="container" data-aos="fade-up">
+        <p class="fst-italic">Do you have questions, suggestions, or frustrations? Or just want to chat about the weather? Please reach out using the contact form below; we look forward to hearing from you! </p>
         <div class="row mt-5">
 
             <div class="col-lg-4">
@@ -338,7 +332,7 @@
                     <div class="col-md-12 form-group mt-3">
                         <label asp-for="Email">Your message for House Wren Development:</label>
                         <div >
-						    <textarea asp-for="Message" name="message" rows="8" placeholder="Sure is {currentWeather} outside. Have a day." required></textarea>
+						    <textarea asp-for="Message" name="message" rows="8" placeholder="Sure is weather outside. Have a day." required></textarea>
 						</div>
 					</div>
                     <div class="text-center"><button type="submit">Send Message</button></div>
